@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import musicbuilder.musicbuilder.Clef?>
+<?import musicbuilder.musicbuilder.Meter?>
+<?import musicbuilder.musicbuilder.Staff?>
+<?import musicbuilder.musicbuilder.Note?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import musicbuilder.musicbuilder.NoteMenuItem?>
+<?import musicbuilder.musicbuilder.MeterMenuItem?>
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@styles/font.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="musicbuilder.musicbuilder.MainController">
+   <top>
+      <ToolBar prefHeight="70.0" prefWidth="200.0">
+         <NoteMenuItem url="@img/osemka.PNG" note="i" onMouseClicked="#selectNute"></NoteMenuItem>
+         <NoteMenuItem url="@img/cwiercnuta.PNG" note="q" onMouseClicked="#selectNute"></NoteMenuItem>
+         <NoteMenuItem url="@img/polnuta.PNG" note="h" onMouseClicked="#selectNute"></NoteMenuItem>
+         <NoteMenuItem url="@img/calanuta.PNG" note="w" onMouseClicked="#selectNute"></NoteMenuItem>
+         <NoteMenuItem url="@img/pauzaosemkowa.PNG" note="Ri" onMouseClicked="#selectNute"></NoteMenuItem>
+         <NoteMenuItem url="@img/pauzacwiercnutowa.PNG" note="Rq" onMouseClicked="#selectNute"></NoteMenuItem>
+         <NoteMenuItem url="@img/pauzapolnotowa.PNG" note="Rh" onMouseClicked="#selectNute"></NoteMenuItem>
+         <NoteMenuItem url="@img/pauzacalonutowa.PNG" note="Rw" onMouseClicked="#selectNute"></NoteMenuItem>
+
+         <NoteMenuItem url="@img/calanuta.PNG" note="Rw" onMouseClicked="#play"></NoteMenuItem>
+      </ToolBar>
+   </top>
+   <left>
+      <ScrollPane fx:id="leftMenu" fitToWidth="true" prefHeight="360.0" prefWidth="180.0" BorderPane.alignment="CENTER">
+         <content>
+            <VBox fx:id="leftMenuItems" spacing="5.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <TitledPane text="Clefs">
+                  <FlowPane>
+                     <NoteMenuItem url="@img/treble.PNG" note="i" onMouseClicked="#selectNute"></NoteMenuItem>
+                     <NoteMenuItem url="@img/bass.PNG" note="i" onMouseClicked="#selectNute"></NoteMenuItem>
+                     <NoteMenuItem url="@img/alto.PNG" note="i" onMouseClicked="#selectNute"></NoteMenuItem>
+                  </FlowPane>
+               </TitledPane>
+               <TitledPane text="Meters">
+                  <FlowPane>
+                     <MeterMenuItem url="@img/24.PNG" meterTop="2" meterBottom="4" onMouseClicked="#changeMeter"></MeterMenuItem>
+                     <MeterMenuItem url="@img/44.PNG" meterTop="4" meterBottom="4" onMouseClicked="#changeMeter"></MeterMenuItem>
+                     <MeterMenuItem url="@img/68.PNG" meterTop="6" meterBottom="8" onMouseClicked="#changeMeter"></MeterMenuItem>
+                     <MeterMenuItem url="@img/98.PNG" meterTop="9" meterBottom="8" onMouseClicked="#changeMeter"></MeterMenuItem>
+                  </FlowPane>
+               </TitledPane>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </left>
+   <center>
+      <ScrollPane style="-fx-padding: 20px; -fx-alignment: top_center;" fx:id="Cent" fitToWidth="true">
+         <FlowPane alignment="TOP_CENTER" fx:id="flowPane" onKeyReleased="#onKeyPress">
+
+         </FlowPane>
+      </ScrollPane>
+   </center>
+</BorderPane>

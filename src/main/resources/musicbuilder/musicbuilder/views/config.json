@@ -1,0 +1,20 @@
+{
+  "notes": [
+    {
+      "notation": "w",
+      "urlImage": "@img/calanuta.png"
+    },
+    {
+      "notation": "h",
+      "urlImage": "@img/polnuta.png"
+    },
+    {
+      "notation": "q",
+      "urlImage": "@img/cwiercnuta.png"
+    },
+    {
+      "notation": "i",
+      "urlImage": "@img/osemka.png"
+    }
+  ]
+}
