@@ -2,11 +2,16 @@ package musicbuilder.musicbuilder.controllers;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.print.PrinterJob;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.FlowPane;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -97,7 +102,7 @@ public class MainController implements Initializable {
 
     protected void setWorkspace()
     {
-        for(int i = 0; i < 10; i++)
+        for(int i = 0; i < 30; i++)
         {
             Tact tact = new Tact();
             tact.setController(this);
@@ -139,7 +144,7 @@ public class MainController implements Initializable {
     }
 
     public void play(MouseEvent mouseEvent) {
-       /* String notation = "";
+       String notation = "";
 
         for(Node tact : flowPane.getChildren())
         {
@@ -151,12 +156,12 @@ public class MainController implements Initializable {
                     {
                         continue;
                     }
-                    if(((Note) note).dzwiek == null)
+                    if(((Note) note).sound == null)
                     {
-                        notation += ((Note) note).notation + " ";
+                        notation += ((Note) note).note.notation + " ";
                     }
                     else {
-                        notation += ((Note) note).dzwiek + ((Note) note).notation + " ";
+                        notation += ((Note) note).sound + ((Note) note).note.notation + " ";
                     }
                 }
             }
@@ -165,7 +170,7 @@ public class MainController implements Initializable {
         System.out.println(notation);
 
         Play play = new Play(notation);
-        play.start();*/
+        play.start();
     }
 
     public void selectMeter(MouseEvent mouseEvent) {
@@ -183,7 +188,7 @@ public class MainController implements Initializable {
 
     public void selectClef(MouseEvent mouseEvent) {
         ClefMenuItem clefMenuItem = (ClefMenuItem) mouseEvent.getSource();
-
         clef.setClef(clefMenuItem.getModel());
+
     }
 }

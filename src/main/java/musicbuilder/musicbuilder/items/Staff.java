@@ -16,60 +16,39 @@ public class Staff extends StackPane {
 
     public String getSound(int line)
     {
-        String sound = "C";
+        String[] sounds = {"E", "D", "C", "H", "A", "G", "F", "E", "D", "C", "H", "A", "G", "F", "E", "D", "C", "H", "A", "G", "F", "E", "D", "C"};
+        int sound = 0;
+        int oktawa = 6;
 
-        switch(line)
+        for(int i = 0; i < line; i++)
         {
-            case 0:
-                sound = "E";
-                break;
-            case 1:
-                sound = "F";
-                break;
-            case 2:
-                sound = "G";
-                break;
-            case 3:
-                sound = "A";
-                break;
-            case 4:
-                sound = "B";
-                break;
-            case 5:
-                sound = "C5";
-                break;
-            case 6:
-                sound = "D5";
-                break;
-            case 7:
-                sound = "E5";
-                break;
-            case 8:
-                sound = "F5";
-                break;
+            if(sounds[sound] == "C")
+            {
+                oktawa--;
+            }
+
+            sound++;
         }
 
-        return sound;
+        return sounds[sound] + oktawa;
     }
 
     public int getLine(double y)
     {
         double clickPosition = y - this.getStaffMinY();
+
         int line = 0;
 
-        if(clickPosition > 0 && clickPosition < 90) {
+        if(clickPosition > 0 && clickPosition < 105) {
 
-            double lineHeight = (90) / 9;
-            line = (int) (clickPosition / lineHeight);
+            double lineHeight = (105) / 21;
+            line = (int) ((clickPosition) / (lineHeight));
         }
-        line++;
-
-        line = 9 - line;
 
         return line;
     }
     public Double getStaffMinY()
     {
-        return staff.getBoundsInLocal().getMinY() + 235;
+        return staff.getBoundsInLocal().getMinY() + 88.5;
     }
 }

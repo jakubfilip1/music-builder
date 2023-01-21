@@ -4,6 +4,7 @@
       "notation": "w",
       "urlImage": "views/img/calanuta.png",
       "unicode": "\uE1D2",
+      "reverseUnicode": null,
       "value": 1,
       "type": "note"
     },
@@ -11,13 +12,16 @@
       "notation": "h",
       "urlImage": "views/img/polnuta.png",
       "unicode": "\uE1D3",
+      "reverseUnicode": "\uE1D4",
       "value": 2,
       "type": "note"
+
     },
     {
       "notation": "q",
       "urlImage": "views/img/cwiercnuta.png",
       "unicode": "\uE1D5",
+      "reverseUnicode": "\uE1D6",
       "value": 4,
       "type": "note"
     },
@@ -25,7 +29,24 @@
       "notation": "i",
       "urlImage": "views/img/osemka.png",
       "unicode": "\uE1D7",
+      "reverseUnicode": "\uE1D8",
       "value": 8,
+      "type": "note"
+    },
+    {
+      "notation": "#",
+      "urlImage": "views/img/szesnastka.png",
+      "unicode": "\uE1D9",
+      "reverseUnicode": "\uE1DA",
+      "value": 16,
+      "type": "note"
+    },
+    {
+      "notation": "b",
+      "urlImage": "views/img/trzydziestkadwojka.png",
+      "unicode": "\uE1DB",
+      "reverseUnicode": "\uE1DC",
+      "value": 32,
       "type": "note"
     },
     {
@@ -54,6 +75,20 @@
       "urlImage": "views/img/pauzaosemkowa.png",
       "unicode": "\uE4E6",
       "value": 8,
+      "type": "rest"
+    },
+    {
+      "notation": "R#",
+      "urlImage": "views/img/pauzaszesnastkowa.png",
+      "unicode": "\uE4E7",
+      "value": 16,
+      "type": "rest"
+    },
+    {
+      "notation": "Rb",
+      "urlImage": "views/img/pauzatrzydziestkodwojkowa.png",
+      "unicode": "\uE4E8",
+      "value": 32,
       "type": "rest"
     }
   ],
@@ -98,7 +133,7 @@
       "notation": "6/8",
       "urlImage": "views/img/68.png",
       "top": 6,
-      "top": 8,
+      "bottom": 8,
       "topUnicode": "\uE086",
       "bottomUnicode": "\uE088"
     },

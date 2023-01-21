@@ -25,7 +25,7 @@ public class Clef extends Staff {
         this.getChildren().remove(text);
 
         text = new Text(this.clef.unicode);
-        text.setTranslateY(-10 * clef.line);
+        text.setTranslateY(-5 * clef.line);
 
         this.getChildren().add(text);
     }

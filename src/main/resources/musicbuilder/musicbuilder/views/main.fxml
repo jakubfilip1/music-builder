@@ -4,6 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.text.Text?>
 <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@styles/font.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="musicbuilder.musicbuilder.controllers.MainController">
    <top>
       <ToolBar prefHeight="70.0" prefWidth="200.0" fx:id="toolBar">
@@ -30,7 +31,7 @@
    </left>
    <center>
       <ScrollPane style="-fx-padding: 20px; -fx-alignment: top_center;" fx:id="Cent" fitToWidth="true">
-         <FlowPane alignment="TOP_CENTER" fx:id="flowPane">
+         <FlowPane alignment="TOP_CENTER" fx:id="flowPane" maxWidth="500">
 
          </FlowPane>
       </ScrollPane>

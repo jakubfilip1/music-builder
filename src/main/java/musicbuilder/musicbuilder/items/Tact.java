@@ -32,6 +32,8 @@ public class Tact extends HBox {
             value -= 1024 / newNote.value;
 
             note.setOnMouseClicked(event -> controller.addNote(event));
+            note.setOnMouseEntered(event -> note.mouseEntered(event));
+            note.setOnMouseExited(event -> note.mouseExited(event));
 
             if(previousNote == null)
             {
@@ -67,8 +69,6 @@ public class Tact extends HBox {
     {
         int value = controller.meter.getMaxTactValue() - getValueWithout(note);
 
-        System.out.println(value);
-
         if(value >= (1024 / model.value))
         {
             note.setNote(model, mouseY);
@@ -86,15 +86,11 @@ public class Tact extends HBox {
 
                     if (now) {
 
-                        System.out.println("Weszło w ogóle?");
-
                         if (!Objects.equals(((Note) note2).note.type, "rest")) {
                             break;
                         }
 
                         value += 1024 / ((Note) note2).note.value;
-
-                        System.out.println(value);
 
                         list.add((Note) note2);
 
