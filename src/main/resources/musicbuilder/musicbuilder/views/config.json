@@ -2,19 +2,105 @@
   "notes": [
     {
       "notation": "w",
-      "urlImage": "@img/calanuta.png"
+      "urlImage": "views/img/calanuta.png",
+      "unicode": "\uE1D2",
+      "value": 1
     },
     {
       "notation": "h",
-      "urlImage": "@img/polnuta.png"
+      "urlImage": "views/img/polnuta.png",
+      "unicode": "\uE1D3",
+      "value": 2
     },
     {
       "notation": "q",
-      "urlImage": "@img/cwiercnuta.png"
+      "urlImage": "views/img/cwiercnuta.png",
+      "unicode": "\uE1D5",
+      "value": 4
     },
     {
       "notation": "i",
-      "urlImage": "@img/osemka.png"
+      "urlImage": "views/img/osemka.png",
+      "unicode": "\uE1D7",
+      "value": 8
+    },
+    {
+      "notation": "Rw",
+      "urlImage": "views/img/pauzacalonutowa.png",
+      "unicode": "\uE4E3",
+      "value": 1
+    },
+    {
+      "notation": "Rh",
+      "urlImage": "views/img/pauzapolnotowa.png",
+      "unicode": "\uE4E4",
+      "value": 2
+    },
+    {
+      "notation": "Rq",
+      "urlImage": "views/img/pauzacwiercnutowa.png",
+      "unicode": "\uE4E5",
+      "value": 4
+    },
+    {
+      "notation": "Ri",
+      "urlImage": "views/img/pauzaosemkowa.png",
+      "unicode": "\uE4E6",
+      "value": 8
+    }
+  ],
+  "clefs": [
+    {
+      "notation": "Violin",
+      "urlImage": "views/img/treble.png",
+      "unicode": "\uE058",
+      "line": 2
+    },
+    {
+      "notation": "Bass",
+      "urlImage": "views/img/bass.png",
+      "unicode": "\uE062",
+      "line": 6
+    },
+    {
+      "notation": "Alto Sax",
+      "urlImage": "views/img/alto.png",
+      "unicode": "\uE05C",
+      "line": 4
+    }
+  ],
+  "meters": [
+    {
+      "notation": "2/4",
+      "urlImage": "views/img/24.png",
+      "top": 2,
+      "bottom": 4,
+      "topUnicode": "\uE082",
+      "bottomUnicode": "\uE084"
+    },
+    {
+      "notation": "4/4",
+      "urlImage": "views/img/44.png",
+      "top": 4,
+      "bottom": 4,
+      "topUnicode": "\uE084",
+      "bottomUnicode": "\uE084"
+    },
+    {
+      "notation": "6/8",
+      "urlImage": "views/img/68.png",
+      "top": 6,
+      "top": 8,
+      "topUnicode": "\uE086",
+      "bottomUnicode": "\uE088"
+    },
+    {
+      "notation": "9/8",
+      "urlImage": "views/img/98.png",
+      "top": 9,
+      "bottom": 8,
+      "topUnicode": "\uE089",
+      "bottomUnicode": "\uE088"
     }
   ]
 }

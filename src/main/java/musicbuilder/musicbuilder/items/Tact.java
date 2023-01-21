@@ -1,13 +1,10 @@
-package musicbuilder.musicbuilder;
+package musicbuilder.musicbuilder.items;
 
-import javafx.event.EventHandler;
-import javafx.geometry.Insets;
 import javafx.scene.Node;
-import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
-
-import java.util.ArrayList;
+import musicbuilder.musicbuilder.config.ConfigManager;
+import musicbuilder.musicbuilder.controllers.MainController;
 
 public class Tact extends HBox {
 
@@ -20,19 +17,20 @@ public class Tact extends HBox {
 
     public void newEmptyNote(Note previousNote)
     {
-        int value = controller.meter.getMaxTactValue() - getValueWithout(new Note());
+        int value = controller.meter.getMaxTactValue() - getValueWithout(null);
+
+        System.out.println(value);
+
 
         while(value > 0)
         {
-            Note note = new Note();
+            musicbuilder.musicbuilder.config.Note newNote = new ConfigManager().getNoteForValue(value);
 
-            String newNote = Notation.getNoteForValue(value);
+            Note note = new Note(newNote, 0);
 
-            value -= Notation.getValue(newNote);
+            value -= 1024 / newNote.value;
 
-            note.setNote(newNote, 0);
-
-            note.setOnMouseClicked(event -> controller.onMouseClick(event));
+            note.setOnMouseClicked(event -> controller.addNote(event));
 
             if(previousNote == null)
             {
@@ -52,7 +50,7 @@ public class Tact extends HBox {
         {
             if(!(note instanceof Text) && (Note)note != noteWithout)
             {
-                value += Notation.getValue(((Note) note).notation);
+                value += 1024 / ((Note) note).note.value;
             }
         }
 
@@ -62,6 +60,12 @@ public class Tact extends HBox {
     public void newMeter()
     {
 
+    }
+
+    public void addNote(Note note, musicbuilder.musicbuilder.config.Note model, double mouseY)
+    {
+        note.setNote(model, mouseY);
+        newEmptyNote(note);
     }
     public Tact()
     {

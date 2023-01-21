@@ -1,4 +1,4 @@
-package musicbuilder.musicbuilder;
+package musicbuilder.musicbuilder.services;
 
 import org.jfugue.player.Player;
 
