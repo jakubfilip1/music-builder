@@ -130,9 +130,6 @@ public class MainController implements Initializable {
         Tact tact = (Tact) note.getParent();
 
         tact.addNote(note, selectedNote, mouseEvent.getY());
-
-        //Play play = new Play(note.dzwiek + note.);
-        //play.start();
     }
 
     public void selectNote(MouseEvent mouseEvent) {

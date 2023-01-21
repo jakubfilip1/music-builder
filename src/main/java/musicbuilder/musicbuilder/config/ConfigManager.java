@@ -6,11 +6,16 @@ import musicbuilder.musicbuilder.controllers.MainController;
 
 import java.io.*;
 import java.util.List;
+import java.util.Objects;
 
 public class ConfigManager {
     protected Config config;
     public ConfigManager()  {
+        configInit();
+    }
 
+    protected void configInit()
+    {
         InputStream inputStream = MusicBuilderApplication.class.getResourceAsStream("views/config.json");
 
         Gson gson = new Gson();
@@ -41,11 +46,11 @@ public class ConfigManager {
         return config.meters;
     }
 
-    public Note getNoteForValue(int value)
+    public Note getRestForValue(int value)
     {
         for (Note note : getNotes())
         {
-            if(value >= 1024 / note.value)
+            if(Objects.equals(note.type, "rest") && (value >= (1024 / note.value)))
             {
                 return note;
             }
