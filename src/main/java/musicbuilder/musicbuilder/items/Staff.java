@@ -39,9 +39,9 @@ public class Staff extends StackPane {
 
         int line = 0;
 
-        if(clickPosition > 0 && clickPosition < 105) {
+        if(clickPosition > 0 && clickPosition < 210) {
 
-            double lineHeight = (105) / 21;
+            double lineHeight = (210) / 21;
             line = (int) ((clickPosition) / (lineHeight));
         }
 
@@ -49,6 +49,6 @@ public class Staff extends StackPane {
     }
     public Double getStaffMinY()
     {
-        return staff.getBoundsInLocal().getMinY() + 88.5;
+        return staff.getBoundsInLocal().getMinY() + 177;
     }
 }

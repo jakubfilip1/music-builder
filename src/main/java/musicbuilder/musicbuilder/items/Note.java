@@ -3,6 +3,7 @@ package musicbuilder.musicbuilder.items;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import musicbuilder.musicbuilder.config.Model;
+import musicbuilder.musicbuilder.services.Play;
 
 import java.util.ArrayList;
 
@@ -44,12 +45,17 @@ public class Note extends Staff {
 
         if(!this.note.notation.contains("R"))
         {
-            text.setTranslateY(5 * getLine(mouseY) - 70);
+            text.setTranslateY(10 * getLine(mouseY) - 140);
             sound = getSound(getLine(mouseY));
+
+            Play play = new Play(this.sound + this.note.notation);
+
+            System.out.println(this.sound + this.note.notation);
+            play.start();
         }
         else
         {
-            text.setTranslateY(-20);
+            text.setTranslateY(-40);
             sound = null;
         }
 
@@ -62,8 +68,8 @@ public class Note extends Staff {
         {
             Text text = new Text("\uE023");
             Text text2 = new Text("\uE023");
-            text.setTranslateY(i * 10 + 10);
-            text2.setTranslateY(i * -10 - 50);
+            text.setTranslateY(i * 20 + 20);
+            text2.setTranslateY(i * -20 - 100);
             text.setOpacity(0.2);
             text2.setOpacity(0.2);
             tempStaves.add(text);

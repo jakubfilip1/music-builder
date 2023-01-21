@@ -31,7 +31,7 @@
    </left>
    <center>
       <ScrollPane style="-fx-padding: 20px; -fx-alignment: top_center;" fx:id="Cent" fitToWidth="true">
-         <FlowPane alignment="TOP_CENTER" fx:id="flowPane" maxWidth="500">
+         <FlowPane alignment="TOP_CENTER" fx:id="flowPane">
 
          </FlowPane>
       </ScrollPane>

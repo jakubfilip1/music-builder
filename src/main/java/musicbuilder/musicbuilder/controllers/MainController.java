@@ -102,7 +102,7 @@ public class MainController implements Initializable {
 
     protected void setWorkspace()
     {
-        for(int i = 0; i < 30; i++)
+        for(int i = 0; i < 40; i++)
         {
             Tact tact = new Tact();
             tact.setController(this);
@@ -117,6 +117,12 @@ public class MainController implements Initializable {
         configManager = new ConfigManager();
 
         setNotes();
+
+        Label button = new Label();
+        button.setOnMouseClicked(event -> this.play(event));
+        button.setText("P");
+        this.toolBar.getItems().add(button);
+
         setClefs();
         setMeters();
 

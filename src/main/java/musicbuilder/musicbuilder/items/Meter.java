@@ -30,10 +30,10 @@ public class Meter extends Staff {
         this.getChildren().remove(this.meterBottom);
 
         this.meterTop = new Text(this.meter.topUnicode);
-        this.meterTop.setTranslateY(-30);
+        this.meterTop.setTranslateY(-60);
 
         this.meterBottom = new Text(this.meter.bottomUnicode);
-        this.meterBottom.setTranslateY(-10);
+        this.meterBottom.setTranslateY(-20);
 
         this.getChildren().add(this.meterTop);
         this.getChildren().add(this.meterBottom);

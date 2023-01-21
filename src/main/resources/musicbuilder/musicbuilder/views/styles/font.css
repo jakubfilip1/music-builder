@@ -8,7 +8,7 @@
 Text
 {
     -fx-font-family: Bravura;
-    -fx-font-size: 40px; /*80*/
+    -fx-font-size: 80px; /*80*/
     -fx-padding: 0px;
 }
 
@@ -22,6 +22,11 @@ Button
     -fx-pref-width: 60px !important;
     -fx-pref-height: 60px !important;
     -fx-line-height: 1.5;
+}
+
+Label
+{
+    -fx-font-size: 60px;
 }
 
 .nuteItem
